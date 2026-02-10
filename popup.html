@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 350px; height: 500px; padding: 10px; font-family: sans-serif; display: flex; flex-direction: column; }
+    #config { margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+    input { width: 100%; margin-bottom: 5px; box-sizing: border-box; }
+    #chat { flex-grow: 1; overflow-y: auto; border: 1px solid #eee; padding: 5px; margin-bottom: 10px; }
+    .msg { margin-bottom: 5px; }
+    .me { text-align: right; color: blue; }
+    .bot { text-align: left; color: green; }
+    #input-area { display: flex; }
+    #msg-input { flex-grow: 1; }
+  </style>
+</head>
+<body>
+  <div id="config">
+    <input type="text" id="worker-url" placeholder="Worker URL (e.g. https://moltbot.workers.dev)">
+    <input type="text" id="token" placeholder="Gateway Token">
+    <button id="save-btn">Save & Connect</button>
+  </div>
+  <div id="chat"></div>
+  <div id="input-area">
+    <input type="text" id="msg-input" placeholder="Type a message...">
+    <button id="send-btn">Send</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
